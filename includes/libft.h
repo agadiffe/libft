@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 15:05:28 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/07/12 00:13:26 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/07/12 00:20:39 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -163,6 +163,7 @@ char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strjoin_free(char *s1, char const *s2);
 char			**ft_strsplit(char const *s, char c);
+char			**ft_strsplitwith(char const *s, char *c);
 
 /*
 **	Misc

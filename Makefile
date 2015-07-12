@@ -6,7 +6,7 @@
 #    By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/14 15:22:30 by agadiffe          #+#    #+#              #
-#    Updated: 2015/07/12 00:12:56 by agadiffe         ###   ########.fr        #
+#    Updated: 2015/07/12 00:21:06 by agadiffe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ SRC_NAME +=	ft_isalnum.c		ft_isalpha.c			ft_isascii.c		\
 			ft_error.c			ft_putnbr_separator.c	\
 			ft_atoi.c			ft_tolower.c			ft_toupper.c		\
 			ft_strrev.c			ft_strsub.c				ft_strjoin.c		\
-			ft_strjoin_free.c	ft_strsplit.c			\
+			ft_strjoin_free.c	ft_strsplit.c			ft_strsplitwith.c	\
 			ft_strlen.c			ft_strchr.c				ft_strrchr.c		\
 			ft_strnlen.c		ft_strstr.c				ft_strcasestr.c		\
 			ft_strstrchr.c		ft_strnstr.c			ft_wordcount.c		\

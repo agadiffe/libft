@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_strsplitwith.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/08 17:17:18 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/07/12 00:18:05 by agadiffe         ###   ########.fr       */
+/*   Created: 2015/07/12 00:17:16 by agadiffe          #+#    #+#             */
+/*   Updated: 2015/07/12 00:19:57 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@
 **		DESCRIPTION
 **	Alloue (avec malloc(3)) et retourne un tableau de chaines de caracteres
 **	(toutes terminees par un ’\0’, le tableau egalement) resultant de la
-**	decoupe de s selon le caractere c.
+**	decoupe de s selon les caracteres de la chaine c.
 **	Si l’allocation echoue, la fonction retourne NULL.
 **	Exemple :
-**	ft_strsplit("*salut*les***etudiants*", ’*’)
+**	ft_strsplit("*&&&salut*&&&*les**&&&*etudiants&*", "&*")
 **	renvoie le tableau ["salut", "les", "etudiants"].
 */
 
-char	**ft_strsplit(char const *s, char c)
+char	**ft_strsplitwith(char const *s, char *c)
 {
 	char	**tab;
 	size_t	i;
@@ -33,14 +33,14 @@ char	**ft_strsplit(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!(tab = (char**)malloc(sizeof(char*) * (ft_wordcount(s, c) + 1))))
+	if (!(tab = (char**)malloc(sizeof(char*) * (ft_wordcountwith(s, c) + 1))))
 		return (NULL);
 	while (s[i])
 	{
 		k = 0;
-		while (s[i] == c && s[i])
+		while (ft_strchr(c, s[i]) && s[i])
 			i++;
-		while (s[i] != c && s[i])
+		while (!ft_strchr(c, s[i]) && s[i])
 		{
 			i++;
 			k++;
