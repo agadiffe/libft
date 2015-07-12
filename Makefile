@@ -6,7 +6,7 @@
 #    By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/14 15:22:30 by agadiffe          #+#    #+#              #
-#    Updated: 2015/07/11 23:44:25 by agadiffe         ###   ########.fr        #
+#    Updated: 2015/07/12 00:12:56 by agadiffe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,7 @@ SRC_NAME +=	ft_isalnum.c		ft_isalpha.c			ft_isascii.c		\
 			ft_strnlen.c		ft_strstr.c				ft_strcasestr.c		\
 			ft_strstrchr.c		ft_strnstr.c			ft_wordcount.c		\
 			ft_striter.c		ft_striteri.c			ft_strmap.c			\
-			ft_strmapi.c		ft_strtrim.c
+			ft_strmapi.c		ft_strtrim.c			ft_wordcountwith.c
 SRC_NAME +=	ft_memcmp.c			\
 			ft_bzero.c			ft_memcpy.c				ft_memccpy.c		\
 			ft_memmove.c		ft_memset.c				ft_realloc.c		\
