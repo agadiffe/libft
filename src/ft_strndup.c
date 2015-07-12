@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/11 23:37:22 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/07/11 23:42:00 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/07/12 03:20:29 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 */
 
 #include "libft.h"
+#include <stdlib.h>
 #include <stddef.h>
 
 char	*ft_strndup(const char *s1, size_t n)
