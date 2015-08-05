@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 15:05:28 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/07/12 00:20:39 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/05 23:03:56 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,6 +147,7 @@ char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strstrchr(const char *s, const char *str);
 char			*ft_strstr(const char *s1, const char *s2);
+char			*ft_strrstr(const char *s1, const char *s2);
 char			*ft_strcasestr(const char *s1, const char *s2);
 char			*ft_strnstr(const char *s1, const char *s2, size_t n);
 size_t			ft_wordcount(const char *s, char c);
