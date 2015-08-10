@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/11 23:37:22 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/07/12 03:20:29 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/10 16:30:49 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ char	*ft_strndup(const char *s1, size_t n)
 	if (!(cpy = (char *)malloc(sizeof(char) * (n + 1))))
 		return (NULL);
 	ft_strncpy(cpy, s1, n);
+	cpy[n] = '\0';
 	return (cpy);
 }
