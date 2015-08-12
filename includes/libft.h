@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 15:05:28 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/05 23:03:56 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/11 20:42:48 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,7 @@ char			*ft_strndup(const char *s1, size_t n);
 **	Free
 */
 void			ft_strdel(char **as);
+void			ft_strtabdel(char ***astrtab);
 void			ft_strclr(char *s);
 
 /*
