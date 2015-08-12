@@ -16,6 +16,5 @@
 void	ft_error(const char *s, int n)
 {
 	ft_putendl_fd(s, 2);
-	if (n < -1)
-		exit(n);
+	exit(n);
 }
