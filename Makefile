@@ -6,7 +6,7 @@
 #    By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/14 15:22:30 by agadiffe          #+#    #+#              #
-#    Updated: 2015/08/11 20:41:58 by agadiffe         ###   ########.fr        #
+#    Updated: 2015/08/27 17:55:42 by agadiffe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,16 +46,17 @@ SRC_NAME +=	ft_isalnum.c		ft_isalpha.c			ft_isascii.c		\
 			ft_putnbr_endl.c	ft_putchar_fd.c			ft_putstr_fd.c		\
 			ft_putendl_fd.c		ft_putnbr_fd.c			ft_putnbr_endl_fd.c	\
 			ft_putnchar.c		ft_putnstr.c			ft_putnendl.c		\
-			ft_error.c			ft_putnbr_separator.c	\
+			ft_error.c			ft_putnbr_separator.c	ft_putstrtab.c		\
 			ft_atoi.c			ft_tolower.c			ft_toupper.c		\
 			ft_strrev.c			ft_strsub.c				ft_strjoin.c		\
 			ft_strjoin_free.c	ft_strsplit.c			ft_strsplitwith.c	\
+			ft_strtabjoin.c		\
 			ft_strlen.c			ft_strchr.c				ft_strrchr.c		\
 			ft_strnlen.c		ft_strstr.c				ft_strcasestr.c		\
 			ft_strstrchr.c		ft_strnstr.c			ft_wordcount.c		\
 			ft_striter.c		ft_striteri.c			ft_strmap.c			\
 			ft_strmapi.c		ft_strtrim.c			ft_wordcountwith.c	\
-			ft_strrstr.c
+			ft_strrstr.c		ft_strtablen.c
 SRC_NAME +=	ft_memcmp.c			\
 			ft_bzero.c			ft_memcpy.c				ft_memccpy.c		\
 			ft_memmove.c		ft_memset.c				ft_realloc.c		\
@@ -81,7 +82,7 @@ $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo ""
-	@echo "[\033[32m$(NAME) done\033[0m]"
+	@echo -e "\033[32m[$(NAME) done]\033[0m"
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@mkdir -p $(OBJ_PATH)

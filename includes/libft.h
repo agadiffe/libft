@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 15:05:28 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/11 20:42:48 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/27 17:58:23 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,6 +138,7 @@ void			ft_putnchar(char c, size_t n);
 void			ft_putnstr(char const *s, size_t n);
 void			ft_putnendl(char const *s, size_t n);
 void			ft_error(const char *s, int n);
+void			ft_putstrtab(char **tab);
 
 /*
 **	Search
@@ -153,6 +154,7 @@ char			*ft_strcasestr(const char *s1, const char *s2);
 char			*ft_strnstr(const char *s1, const char *s2, size_t n);
 size_t			ft_wordcount(const char *s, char c);
 size_t			ft_wordcountwith(const char *s, char *c);
+size_t			ft_strtablen(char **tab);
 
 /*
 **	Transform
@@ -166,6 +168,7 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strjoin_free(char *s1, char const *s2);
 char			**ft_strsplit(char const *s, char c);
 char			**ft_strsplitwith(char const *s, char *c);
+char			**ft_strtabjoin(char **tab1, char **tab2);
 
 /*
 **	Misc
