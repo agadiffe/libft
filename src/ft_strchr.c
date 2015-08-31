@@ -6,9 +6,11 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 14:37:10 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/31 02:16:56 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 04:28:39 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 /*
 **		DESCRIPTION

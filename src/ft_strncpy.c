@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 19:48:22 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/31 02:51:55 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 04:24:11 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 
 char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
-	char	d;
+	char	*d;
 
 	if (!n)
 		return (dst);

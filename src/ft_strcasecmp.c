@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/18 21:35:23 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/31 02:25:19 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 04:22:07 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,10 @@
 static void		ft_str_tolower(char *str)
 {
 	while (*str)
-		*str = ft_tolower(*str++);
+	{
+		*str = ft_tolower(*str);
+		str++;
+	}
 }
 
 int				ft_strcasecmp(const char *s1, const char *s2)

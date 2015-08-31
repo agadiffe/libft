@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/11 23:23:29 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/31 03:51:16 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 04:30:55 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_wordcountwith(const char *s, char *c)
 			s++;
 		if (*s)
 			count++;
-		while (*s && !ft_strchr(c, s[i]))
+		while (*s && !ft_strchr(c, *s))
 			s++;
 	}
 	return (count);

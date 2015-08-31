@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 20:53:26 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/31 03:35:42 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 04:31:34 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 
 char	*ft_strrstr(const char *s1, const char *s2)
 {
-	char	*str;
+	const char		*str;
 
 	if (*s2 == '\0')
 		return ((char *)s1);

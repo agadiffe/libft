@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 18:31:44 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/31 02:09:56 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 04:23:47 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	char	str;
+	char	*str;
 
 	str = dst;
 	if (!dst && !src)

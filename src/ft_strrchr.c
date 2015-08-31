@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 20:53:26 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/31 03:15:23 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 04:29:51 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	str;
+	const char		*str;
 
 	str = s;
 	str = str + ft_strlen(s);

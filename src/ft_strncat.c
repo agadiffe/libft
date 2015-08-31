@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 14:49:23 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/31 02:43:53 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 04:25:53 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ char	*ft_strncat(char *s1, const char *s2, size_t n)
 		*str1++ = *s2++;
 		n--;
 	}
-	s1[i] = '\0';
+	*str1 = '\0';
 	return (s1);
 }

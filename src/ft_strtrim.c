@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 01:29:49 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/31 04:09:54 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 04:30:24 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static int	ft_isblank_nl(int c)
 
 char		*ft_strtrim(char const *s)
 {
-	char	*s_end;
+	char const		*s_end;
 
 	while (ft_isblank_nl(*s))
 		s++;

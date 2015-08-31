@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/18 21:47:26 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/31 02:26:21 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 04:22:35 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@
 static void		ft_str_tolower(char *str)
 {
 	while (*str)
-		*str = ft_tolower(*str++);
+	{
+		*str = ft_tolower(*str);
+		str++;
+	}
 }
 
 int		ft_strncasecmp(const char *s1, const char *s2, size_t n)
