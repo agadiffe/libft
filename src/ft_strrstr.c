@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 20:53:26 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/05 23:34:44 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 03:35:42 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,18 @@
 
 char	*ft_strrstr(const char *s1, const char *s2)
 {
-	size_t	i;
+	char	*str;
 
-	i = ft_strlen(s1) - 1;
-	if (s2[0] == '\0')
+	if (*s2 == '\0')
 		return ((char *)s1);
-	while (i > 0)
+	str = s1 + ft_strlen(s1) - 1;
+	while (str != s1)
 	{
-		if (ft_strstr((char *)&s1[i], s2))
-			return ((char *)&s1[i]);
-		i--;
+		if (ft_strstr((char *)str, s2))
+			return ((char *)str);
+		str--;
 	}
+	if (ft_strstr((char *)str, s2))
+		return ((char *)str);
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 00:46:16 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/02/01 21:18:46 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 02:03:14 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **		DESCRIPTION
 **	Alloue (avec malloc(3)) et retourne une chaine de caracteres terminee
 **	par un ’\0’ resultant de la concatenation de s1 et s2.
-**	une fois la concatenation faite, libere s1 et s2 et les mets a NULL.
+**	Une fois la concatenation faite, libere s1.
 **	Si l’allocation echoue, la fonction renvoie NULL.
 */
 

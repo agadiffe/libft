@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 01:29:49 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/02/01 21:28:31 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 04:09:54 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,27 +30,14 @@ static int	ft_isblank_nl(int c)
 
 char		*ft_strtrim(char const *s)
 {
-	char	*str;
-	char	*temp;
-	char	*end;
-	size_t	len;
-	size_t	i;
+	char	*s_end;
 
-	i = 0;
-	len = ft_strlen(s);
-	if (!(temp = (char *)malloc(sizeof(char) * len)))
-		return (NULL);
-	end = (char *)s + (len - 1);
 	while (ft_isblank_nl(*s))
 		s++;
-	while (ft_isblank_nl(*end))
-		end--;
-	while (s <= end)
-		temp[i++] = *s++;
-	temp[i] = '\0';
-	if (!(str = (char *)malloc(sizeof(char) * ft_strlen(temp))))
-		return (NULL);
-	ft_strcpy(str, temp);
-	ft_strdel(&temp);
-	return (str);
+	if (*s == '\0')
+		return (ft_strnew(0));
+	s_end = s + ft_strlen(s) - 1;
+	while (ft_isblank_nl(*s_end))
+		s_end--;
+	return (ft_strndup(s, s_end - s + 1));
 }

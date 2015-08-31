@@ -6,12 +6,11 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/18 22:11:33 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/02/01 20:34:29 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/30 22:56:15 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
-#include <stddef.h>
 
 /*
 **		DESCRIPTION
@@ -20,7 +19,7 @@
 
 int		ft_longlen(long n)
 {
-	size_t	len;
+	int		len;
 
 	if (n == LONG_MIN)
 		return (20);

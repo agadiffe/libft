@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 14:39:22 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/01/27 22:15:58 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/30 23:01:34 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ char			*ft_ltoa(long n)
 	char	*s;
 	size_t	len;
 
-	if (n == LONG_MAX)
-		return (ft_strdup("9223372036854775807"));
 	if (n == LONG_MIN)
 		return (ft_strdup("-9223372036854775808"));
 	len = ft_intlen(n) + 1;

@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 14:58:50 by agadiffe          #+#    #+#             */
-/*   Updated: 2014/11/18 20:12:44 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/30 22:44:41 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,5 @@
 
 int	ft_isxdigit(int c)
 {
-	return ((ft_isdigit(c)) || (64 < c && c < 71) || (96 < c && c < 103));
+	return (ft_isdigit(c) || ('A' <= c && c <= 'F') || ('a' <= c && c <= 'f'));
 }

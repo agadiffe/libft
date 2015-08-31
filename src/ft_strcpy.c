@@ -6,12 +6,11 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 18:31:44 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/02/01 21:13:06 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 02:09:56 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 /*
 **		DESCRIPTION
@@ -27,16 +26,13 @@
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	size_t	i;
+	char	str;
 
-	i = 0;
+	str = dst;
 	if (!dst && !src)
 		return (NULL);
-	while (src[i])
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
+	while (*src)
+		*dst++ = *src++;
+	*dst = '\0';
+	return (str);
 }

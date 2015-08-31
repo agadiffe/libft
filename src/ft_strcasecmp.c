@@ -6,12 +6,11 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/18 21:35:23 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/02/01 21:10:08 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 02:25:19 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 /*
 **		DESCRIPTION
@@ -29,26 +28,33 @@
 **	unsigned characters, so that `\200' is greater than `\0'.
 */
 
-int		ft_strcasecmp(const char *s1, const char *s2)
+static void		ft_str_tolower(char *str)
 {
-	size_t	i;
+	while (*str)
+		*str = ft_tolower(*str++);
+}
+
+int				ft_strcasecmp(const char *s1, const char *s2)
+{
 	char	*str1;
 	char	*str2;
+	char	*tmp1;
+	char	*tmp2;
+	int		ret;
 
-	i = 0;
-	str1 = (char *)s1;
-	str2 = (char *)s2;
-	while (str1[i])
-		ft_tolower(str1[i++]);
-	i = 0;
-	while (str2[i])
-		ft_tolower(str2[i++]);
-	i = 0;
-	while (str1[i] == str2[i])
+	str1 = ft_strdup(s1);
+	str2 = ft_strdup(s2);
+	ft_str_tolower(str1);
+	ft_str_tolower(str2);
+	tmp1 = str1;
+	tmp2 = str2;
+	while (*str1 && *str1 == *str2)
 	{
-		if (str1[i] == '\0')
-			return (0);
-		i++;
+		str1++;
+		str2++;
 	}
-	return ((unsigned char)str1[i] - (unsigned char)str2[i]);
+	ret = (unsigned char)*str1 - (unsigned char)*str2;
+	ft_strdel(&tmp1);
+	ft_strdel(&tmp2);
+	return (ret);
 }

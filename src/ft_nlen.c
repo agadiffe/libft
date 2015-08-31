@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/01/21 23:45:26 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/02/01 21:31:40 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 00:01:31 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ int		ft_nlen(uintmax_t n, int base)
 		return (1);
 	len = 0;
 	if (base > 1)
+	{
 		while (n)
 		{
 			n /= base;
 			len++;
 		}
+	}
 	return (len);
 }

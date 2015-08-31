@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 22:35:08 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/02/01 21:27:12 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 03:27:33 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strstr(const char *s1, const char *s2)
 {
 	size_t	len;
 
-	if (s2[0] == '\0')
+	if (*s2 == '\0')
 		return ((char *)s1);
 	len = ft_strlen(s2);
 	while (*s1)

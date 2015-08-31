@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 18:19:17 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/02/01 20:42:35 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/30 23:53:59 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,14 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t			i;
 	unsigned char	*s1;
 	unsigned char	*s2;
 
-	i = 0;
 	if (!n || (!dst && !src))
 		return (dst);
 	s1 = (unsigned char*)dst;
 	s2 = (unsigned char*)src;
-	while (i < n)
-	{
-		s1[i] = s2[i];
-		i++;
-	}
-	return ((void *)s1);
+	while (n--)
+		*s1++ = *s2++;
+	return (dst);
 }

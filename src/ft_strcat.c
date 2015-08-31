@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 15:03:09 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/02/01 21:11:54 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 02:12:00 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,11 @@
 
 char	*ft_strcat(char *s1, const char *s2)
 {
-	size_t	i;
+	char	*str;
 
-	i = ft_strlen(s1);
-	ft_strcpy(&s1[i], s2);
+	str = s1;
+	while (*str)
+		str++;
+	ft_strcpy(str, s2);
 	return (s1);
 }

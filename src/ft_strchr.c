@@ -6,11 +6,9 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 14:37:10 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/02/01 21:12:18 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 02:16:56 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stddef.h>
 
 /*
 **		DESCRIPTION
@@ -25,16 +23,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i++;
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
 	}
 	if ((char)c == '\0')
-		return ((char *)&s[i]);
+		return ((char *)s);
 	return (NULL);
 }

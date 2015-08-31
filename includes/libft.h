@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 15:05:28 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/27 17:58:23 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 00:14:37 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int				ft_nlen(uintmax_t n, int base);
 char			*ft_ntoa(uintmax_t n, const char *base);
 int				ft_longlen(long n);
 
-double			ft_pow(double x, double y);
+int				ft_pow(int x, int y);
 
 void			ft_putdouble(double n, int prec);
 char			*ft_dtoa(double n, int prec);

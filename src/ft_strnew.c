@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 16:36:43 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/02/01 21:25:12 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 02:59:35 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strnew(size_t size)
 {
 	char	*s;
 
-	if (!(s = (char*)malloc(size + 1)))
+	if (!(s = (char *)malloc(sizeof(char) * (size + 1))))
 		return (NULL);
 	ft_memset(s, '\0', size + 1);
 	return (s);

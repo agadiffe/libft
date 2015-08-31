@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/05 14:49:23 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/02/01 21:23:54 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 02:43:53 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,16 +30,16 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	size_t	i;
-	size_t	j;
+	char	*str1;
 
 	if (!n)
 		return (s1);
-	i = ft_strlen(s1);
-	j = 0;
-	while (n > 0 && s2[j])
+	str1 = s1;
+	while (*str1)
+		str1++;
+	while (n && *s2)
 	{
-		s1[i++] = s2[j++];
+		*str1++ = *s2++;
 		n--;
 	}
 	s1[i] = '\0';

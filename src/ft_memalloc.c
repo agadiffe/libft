@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 15:53:26 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/02/01 20:38:06 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/30 23:10:35 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,9 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void	*s;
+	void	*mem;
 
-	if (!size || !(s = malloc(size)))
+	if (!(mem = malloc(size)))
 		return (NULL);
-	ft_bzero(s, size);
-	return (s);
+	return (ft_memset(mem, '\0', size));
 }

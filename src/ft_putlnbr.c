@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 15:14:55 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/01/22 17:24:03 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 00:58:22 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,14 @@
 **		DESCRIPTION
 **	Affiche l'entier long n sur la sortie standard.
 */
+static void		ft_putlnbr_inner(long n)
+{
+	if (n > 9)
+		ft_putlnbr_inner(n / 10);
+	ft_putchar('0' + (n % 10));
+}
 
-void	ft_putlnbr(long n)
+void			ft_putlnbr(long n)
 {
 	if (n == LONG_MIN)
 	{
@@ -30,7 +36,5 @@ void	ft_putlnbr(long n)
 		ft_putchar('-');
 		n = -n;
 	}
-	if (n > 9)
-		ft_putlnbr(n / 10);
-	ft_putchar('0' + (n % 10));
+	ft_putlnbr_inner(n);
 }

@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 21:32:19 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/02/01 21:26:25 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 03:25:29 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,22 @@
 
 /*
 **		DESCRIPTION
-**	The strrev( ) function reverses a given string.
+**	The strrev() function reverses a given string.
 */
 
 char	*ft_strrev(char *str)
 {
-	size_t	i;
-	size_t	len;
-	char	temp;
+	char	*str_origin;
+	char	*str_end;
+	char	tmp;
 
-	i = 0;
-	if (!str)
-		return (NULL);
-	len = ft_strlen(str);
-	while (i < len / 2)
+	str_origin = str;
+	str_end = str + ft_strlen(str) - 1;
+	while (str < str_end)
 	{
-		temp = str[i];
-		str[i] = str[len - 1 - i];
-		str[len - 1 - i] = temp;
-		i++;
+		tmp = *str;
+		*str++ = *str_end;
+		*str_end-- = tmp;
 	}
-	return (str);
+	return (str_origin);
 }

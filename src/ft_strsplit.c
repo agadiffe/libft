@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/08 17:17:18 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/07/12 00:18:05 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/08/31 03:59:28 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,27 +27,25 @@
 char	**ft_strsplit(char const *s, char c)
 {
 	char	**tab;
+	size_t	len;
 	size_t	i;
-	size_t	j;
-	size_t	k;
 
-	i = 0;
-	j = 0;
-	if (!(tab = (char**)malloc(sizeof(char*) * (ft_wordcount(s, c) + 1))))
+	len = ft_wordcount(s, c);
+	if (!(tab = (char **)malloc(sizeof(char *) * (len + 1))))
 		return (NULL);
-	while (s[i])
+	tab[len] = NULL;
+	i = 0;
+	while (*s)
 	{
-		k = 0;
-		while (s[i] == c && s[i])
-			i++;
-		while (s[i] != c && s[i])
+		len = 0;
+		while (*s && *s == c)
+			s++;
+		while (*s && *s != c)
 		{
-			i++;
-			k++;
+			s++;
+			len++;
 		}
-		if (k)
-			tab[j++] = ft_strsub(s, i - k, k);
+		tab[i++] = ft_strndup(s - len, len);
 	}
-	tab[j] = NULL;
 	return (tab);
 }
