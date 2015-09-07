@@ -6,7 +6,7 @@
 #    By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/14 15:22:30 by agadiffe          #+#    #+#              #
-#    Updated: 2015/08/27 17:55:42 by agadiffe         ###   ########.fr        #
+#    Updated: 2015/09/07 19:40:16 by agadiffe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRC_NAME +=	ft_isalnum.c		ft_isalpha.c			ft_isascii.c		\
 			ft_strcpy.c			ft_strncpy.c			ft_strcat.c			\
 			ft_strncat.c		ft_strlcat.c			\
 			ft_strnew.c			ft_strdup.c				ft_strndup.c		\
+			ft_random_string.c	\
 			ft_strdel.c			ft_strclr.c				ft_strtabdel.c		\
 			ft_putchar.c		ft_putstr.c				ft_putendl.c		\
 			ft_putnbr.c			ft_putnbr_base.c		ft_putlnbr.c		\
