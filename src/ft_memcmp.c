@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/06 20:12:46 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/30 23:45:48 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/10/17 18:35:55 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*str1;
 	unsigned char	*str2;
 
-	if (!s1 || !s2)
-		return (s1 - s2);
 	str1 = (unsigned char*)s1;
 	str2 = (unsigned char*)s2;
+	if (!s1 || !s2)
+		return (str1 - str2);
 	while (n)
 	{
 		if (*str1 == *str2)

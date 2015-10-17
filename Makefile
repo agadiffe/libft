@@ -6,7 +6,7 @@
 #    By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/14 15:22:30 by agadiffe          #+#    #+#              #
-#    Updated: 2015/09/07 19:40:16 by agadiffe         ###   ########.fr        #
+#    Updated: 2015/10/17 18:32:23 by agadiffe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@
 NAME = libft.a
 
 CC = gcc
-CFLAGS += -Wall -Werror -Wextra
+CFLAGS += -Wall -Werror -Wextra -pedantic
 
 SRC_PATH = ./src/
 SRC_NAME =	ft_lstadd.c			ft_lstiter.c	\
