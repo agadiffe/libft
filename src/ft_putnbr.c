@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 15:14:55 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/31 00:55:41 by agadiffe         ###   ########.fr       */
+/*   Updated: 2015/12/17 17:57:56 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 **		DESCRIPTION
 **	Affiche l'entier n sur la sortie standard.
 */
+
 static void		ft_putnbr_inner(int n)
 {
 	if (n > 9)
