@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/04 13:30:48 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/02/01 21:21:35 by agadiffe         ###   ########.fr       */
+/*   Updated: 2016/01/09 18:40:29 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 	d = (char *)dst;
 	dst_len = ft_strlen(dst);
 	len = dst_len + ft_strlen(s);
+	d += dst_len;
 	while (dst_len++ < size - 1 && *s)
 		*d++ = *s++;
 	*d = '\0';
