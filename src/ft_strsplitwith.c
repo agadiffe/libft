@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/07/12 00:17:16 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/08/31 03:59:21 by agadiffe         ###   ########.fr       */
+/*   Updated: 2016/01/10 21:41:10 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,8 @@ char	**ft_strsplitwith(char const *s, char *c)
 			s++;
 			len++;
 		}
-		tab[i++] = ft_strndup(s - len, len);
+		if (*s)
+			tab[i++] = ft_strndup(s - len, len);
 	}
 	return (tab);
 }
