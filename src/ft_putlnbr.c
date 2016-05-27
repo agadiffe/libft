@@ -18,14 +18,14 @@
 **	Affiche l'entier long n sur la sortie standard.
 */
 
-static void		ft_putlnbr_inner(long n)
+static void		ft_putlnbr_inner(long long n)
 {
 	if (n > 9)
 		ft_putlnbr_inner(n / 10);
 	ft_putchar('0' + (n % 10));
 }
 
-void			ft_putlnbr(long n)
+void			ft_putlnbr(long long n)
 {
 	if (n == LONG_MIN)
 	{
