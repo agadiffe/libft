@@ -128,7 +128,7 @@ void			ft_putendl(char const *s);
 void			ft_putnbr(int n);
 void			ft_putnbr_separator(uintmax_t n, char *sep);
 void			ft_putnbr_base(uintmax_t n, char *base);
-void			ft_putlnbr(long n);
+void			ft_putlnbr(long long n);
 void			ft_putnbr_endl(int n);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char const *s, int fd);
