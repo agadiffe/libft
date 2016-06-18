@@ -6,19 +6,19 @@
 #    By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/14 15:22:30 by agadiffe          #+#    #+#              #
-#    Updated: 2015/10/17 18:32:23 by agadiffe         ###   ########.fr        #
+#    Updated: 2016/06/18 18:35:16 by agadiffe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY: all, $(NAME), clean, fclean, re
 
-# -----------
-# VARIABLES |
-# -----------
+# ----------------------------------------------------------------------------
+#  # VARIABLES |
+# ----------------------------------------------------------------------------
 NAME = libft.a
 
 CC = gcc
-CFLAGS += -Wall -Werror -Wextra -pedantic
+CFLAGS += -Wall -Werror -Wextra
 
 SRC_PATH = ./src/
 SRC_NAME =	ft_lstadd.c			ft_lstiter.c	\
@@ -64,31 +64,64 @@ SRC_NAME +=	ft_memcmp.c			\
 			ft_memalloc.c		\
 			ft_memdel.c			\
 			ft_memchr.c
-SRC = $(addprefix $(SRC_PATH),$(SRC_NAME))
+
+SRC_PATH_FT_PRINTF = $(SRC_PATH)ft_printf/
+SRC_NAME_FT_PRINTF +=	ft_printf.c					\
+						flag.c						\
+		   				handle_di.c					\
+		   				handle_u.c					\
+		   				handle_o.c					\
+		   				handle_x.c					\
+		   				handle_p.c					\
+		   				handle_c.c					\
+		   				handle_s.c					\
+		   				handle_big_s.c				\
+		   				handle_binary_b.c			\
+		   				handle_date_k.c				\
+		   				handle_n.c					\
+		   				handle_arg.c				\
+		   				flag_handle.c				\
+		   				tools_utf8.c				\
+		   				tools.c						\
+		   				tools_width_prec.c			\
+		   				handle_unsigned_va_arg.c
 
 OBJ_PATH = ./obj/
 OBJ_NAME = $(SRC_NAME:.c=.o)
 OBJ = $(addprefix $(OBJ_PATH),$(OBJ_NAME))
 
+OBJ_NAME_FT_PRINTF = $(SRC_NAME_FT_PRINTF:.c=.o)
+OBJ_FT_PRINTF = $(addprefix $(OBJ_PATH),$(OBJ_NAME_FT_PRINTF))
+
+
 INC_PATH = ./includes/
 INC = $(addprefix -I,$(INC_PATH))
 
 
-# -------
-# RULES |
-# -------
-all: $(NAME)
-	
-$(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
-	@ranlib $(NAME)
-	@echo ""
-	@echo -e "\033[32m[$(NAME) done]\033[0m"
-
+# ----------------------------------------------------------------------------
+#  # MISC |
+# ----------------------------------------------------------------------------
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@mkdir -p $(OBJ_PATH)
 	@echo -n .
 	@$(CC) $(CFLAGS) $(INC) -o $@ -c $<
+
+$(OBJ_PATH)%.o: $(SRC_PATH_FT_PRINTF)%.c
+	@mkdir -p $(OBJ_PATH)
+	@echo -n .
+	@$(CC) $(CFLAGS) $(INC) -o $@ -c $<
+
+
+# ----------------------------------------------------------------------------
+#  # RULES |
+# ----------------------------------------------------------------------------
+all: $(NAME)
+	
+$(NAME): $(OBJ) $(OBJ_FT_PRINTF)
+	@ar rc $(NAME) $(OBJ) $(OBJ_FT_PRINTF)
+	@ranlib $(NAME)
+	@echo ""
+	@echo -e "\033[32m[$(NAME) done]\033[0m"
 
 clean:
 	@rm -rf $(OBJ_PATH)
