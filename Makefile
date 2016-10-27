@@ -6,7 +6,7 @@
 #    By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/14 15:22:30 by agadiffe          #+#    #+#              #
-#    Updated: 2016/06/18 18:35:16 by agadiffe         ###   ########.fr        #
+#    Updated: 2016/10/27 14:17:45 by agadiffe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,8 @@ SRC_NAME +=	ft_get_next_line.c
 SRC_NAME +=	ft_itoa.c			ft_intlen.c		\
 			ft_ltoa.c			ft_longlen.c	\
 			ft_ntoa.c			ft_nlen.c		\
-			ft_pow.c			ft_putdouble.c			ft_dtoa.c
+			ft_pow.c			ft_putdouble.c			ft_dtoa.c			\
+			ft_insertion_sort_inttab.c
 SRC_NAME +=	ft_isalnum.c		ft_isalpha.c			ft_isascii.c		\
 			ft_isblank.c		ft_iscntrl.c			ft_isdigit.c		\
 			ft_isgraph.c		ft_islower.c			ft_isprint.c		\

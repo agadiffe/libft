@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 15:05:28 by agadiffe          #+#    #+#             */
-/*   Updated: 2016/06/18 18:36:43 by agadiffe         ###   ########.fr       */
+/*   Updated: 2016/10/27 14:17:01 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ int				ft_pow(int x, int y);
 
 void			ft_putdouble(double n, int prec);
 char			*ft_dtoa(double n, int prec);
+
+void			ft_insertion_sort_inttab(int *tab, int length);
 
 /*
 **	----------> String manipulation functions <-----
