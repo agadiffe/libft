@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/09 15:09:48 by agadiffe          #+#    #+#             */
-/*   Updated: 2015/02/01 20:37:37 by agadiffe         ###   ########.fr       */
+/*   Updated: 2017/02/24 18:51:09 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	{
 		if (content)
 		{
-			lst->content = (t_list *)malloc(content_size);
+			lst->content = (void *)malloc(content_size);
 			if (!lst->content)
 			{
 				free(lst);
