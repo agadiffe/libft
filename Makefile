@@ -6,7 +6,7 @@
 #    By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/14 15:22:30 by agadiffe          #+#    #+#              #
-#    Updated: 2016/10/27 14:17:45 by agadiffe         ###   ########.fr        #
+#    Updated: 2017/02/24 18:01:21 by agadiffe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ CC = gcc
 CFLAGS += -Wall -Werror -Wextra
 
 SRC_PATH = ./src/
-SRC_NAME =	ft_lstadd.c			ft_lstiter.c	\
+SRC_NAME =	ft_lstadd.c			ft_lstiter.c	ft_lstadd_back.c	\
 			ft_lstdel.c			ft_lstmap.c		\
 			ft_lstdelone.c		ft_lstnew.c
 SRC_NAME +=	ft_get_next_line.c

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2014/11/09 20:49:50 by agadiffe          #+#    #+#             */
-/*   Updated: 2017/02/24 18:08:02 by agadiffe         ###   ########.fr       */
+/*   Created: 2017/02/24 18:09:16 by agadiffe          #+#    #+#             */
+/*   Updated: 2017/02/24 18:09:18 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,21 @@
 
 /*
 **		DESCRIPTION
-**	Ajoute l’element new en tete de la liste.
+**	Ajoute l’element new en fin de la liste.
 */
 
-void	ft_lstadd(t_list **alst, t_list *new)
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
+	t_list	*tmp;
+
 	if (!*alst)
-	{
 		*alst = new;
-		new->next = NULL;
-	}
 	else
 	{
-		new->next = *alst;
-		*alst = new;
+		tmp = *alst;
+		while (tmp->next)
+			tmp = tmp->next;
+		tmp->next = new;
 	}
+	new->next = NULL;
 }
