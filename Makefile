@@ -6,7 +6,7 @@
 #    By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2014/12/14 15:22:30 by agadiffe          #+#    #+#              #
-#    Updated: 2017/02/24 18:01:21 by agadiffe         ###   ########.fr        #
+#    Updated: 2017/02/25 10:28:34 by agadiffe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ SRC_NAME +=	ft_isalnum.c		ft_isalpha.c			ft_isascii.c		\
 			ft_isblank.c		ft_iscntrl.c			ft_isdigit.c		\
 			ft_isgraph.c		ft_islower.c			ft_isprint.c		\
 			ft_ispunct.c		ft_isspace.c			ft_isupper.c		\
-			ft_isxdigit.c		\
+			ft_isxdigit.c		ft_strisnumber.c		\
 			ft_strequ.c			ft_strcaseequ.c			ft_strncaseequ.c	\
 			ft_strnequ.c		ft_strcmp.c				ft_strcasecmp.c		\
 			ft_strncmp.c		ft_strncasecmp.c		\

@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/03 15:05:28 by agadiffe          #+#    #+#             */
-/*   Updated: 2017/02/24 18:01:40 by agadiffe         ###   ########.fr       */
+/*   Updated: 2017/02/25 10:28:01 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@ int				ft_ispunct(int c);
 int				ft_isspace(int c);
 int				ft_isupper(int c);
 int				ft_isxdigit(int c);
+int				ft_strisnumber(const char *s);
 
 /*
 **	Compare
