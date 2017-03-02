@@ -23,7 +23,7 @@ CFLAGS += -Wall -Werror -Wextra
 SRC_PATH = ./src/
 SRC_NAME =	ft_lstadd.c			ft_lstiter.c			ft_lstaddback.c		\
 			ft_lstdel.c			ft_lstmap.c				ft_lstgetlast.c		\
-			ft_lstdelone.c		ft_lstnew.c
+			ft_lstdelone.c		ft_lstdelnode.c			ft_lstnew.c
 SRC_NAME +=	ft_get_next_line.c
 SRC_NAME +=	ft_itoa.c			ft_intlen.c		\
 			ft_ltoa.c			ft_longlen.c	\
