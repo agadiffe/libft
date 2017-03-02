@@ -89,6 +89,7 @@ int				ft_isspace(int c);
 int				ft_isupper(int c);
 int				ft_isxdigit(int c);
 int				ft_strisnumber(const char *s);
+int				ft_strnisnumber(const char *s, size_t n);
 
 /*
 **	Compare

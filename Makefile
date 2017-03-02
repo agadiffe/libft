@@ -34,7 +34,7 @@ SRC_NAME +=	ft_isalnum.c		ft_isalpha.c			ft_isascii.c		\
 			ft_isblank.c		ft_iscntrl.c			ft_isdigit.c		\
 			ft_isgraph.c		ft_islower.c			ft_isprint.c		\
 			ft_ispunct.c		ft_isspace.c			ft_isupper.c		\
-			ft_isxdigit.c		ft_strisnumber.c		\
+			ft_isxdigit.c		ft_strisnumber.c		ft_strnisnumber.c	\
 			ft_strequ.c			ft_strcaseequ.c			ft_strncaseequ.c	\
 			ft_strnequ.c		ft_strcmp.c				ft_strcasecmp.c		\
 			ft_strncmp.c		ft_strncasecmp.c		\
