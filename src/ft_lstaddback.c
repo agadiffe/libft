@@ -6,7 +6,7 @@
 /*   By: agadiffe <agadiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/24 18:09:16 by agadiffe          #+#    #+#             */
-/*   Updated: 2017/02/25 10:57:37 by agadiffe         ###   ########.fr       */
+/*   Updated: 2017/05/31 16:57:19 by agadiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,4 @@ void	ft_lstaddback(t_list **alst, t_list *new)
 			tmp = tmp->next;
 		tmp->next = new;
 	}
-	new->next = NULL;
 }
