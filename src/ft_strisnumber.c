@@ -14,7 +14,7 @@
 
 /*
 **		DESCRIPTION
-**	The strisnumber() function tests for a digit number string.  Regard-
+**	The strisnumber() function tests for a whole number string.  Regard-
 **	less of locale, this includes the following characters only:
 **	-------------------------------------------------------------------------
 **	``0''         ``1''         ``2''         ``3''         ``4''
@@ -27,7 +27,7 @@
 
 int		ft_strisnumber(const char *s)
 {
-	if (*s == '-' && *(s + 1))
+	if ((*s == '-' || *s == '+') && *(s + 1))
 		s++;
 	while (*s && ft_isdigit(*s))
 		s++;
