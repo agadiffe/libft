@@ -24,12 +24,14 @@
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
 	t_list	*tmp;
+	t_list	*lst;
 
-	while (*alst)
+	lst = *alst;
+	while (lst)
 	{
-		tmp = (*alst)->next;
-		ft_lstdelone(&(*alst), del);
-		*alst = tmp;
+		tmp = lst->next;
+		ft_lstdelone(&lst, del);
+		lst = tmp;
 	}
-	ft_memdel((void **)alst);
+	alst = NULL;
 }
