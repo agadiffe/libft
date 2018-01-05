@@ -149,6 +149,7 @@ void			ft_putnchar(char c, size_t n);
 void			ft_putnstr(char const *s, size_t n);
 void			ft_putnendl(char const *s, size_t n);
 void			ft_error(const char *s, int n);
+int				ft_error_ret(const char *s, int n);
 void			ft_putstrtab(char **tab);
 
 /*
