@@ -103,7 +103,7 @@ static int		get_line(char **buf, char **line, int ret)
 	return (0);
 }
 
-int				ft_get_next_line(int const fd, char **line)
+int				ft_get_next_line(int const fd, char **line, int stop)
 {
 	static t_gnl	*fd_list = NULL;
 	t_gnl			*d;
@@ -115,7 +115,7 @@ int				ft_get_next_line(int const fd, char **line)
 		if (!(d->buf = ft_strnew(0)))
 			return (-1);
 	d->ret = 1;
-	while (d->ret > 0)
+	while (!stop && d->ret > 0)
 	{
 		if ((ret_gl = get_line(&d->buf, line, d->ret)) == -1)
 			return (-1);
@@ -125,7 +125,7 @@ int				ft_get_next_line(int const fd, char **line)
 		if (!(d->buf = handle_buf(fd, d->buf, &d->ret)))
 			return (-1);
 	}
-	if (get_line(&d->buf, line, d->ret))
+	if (!stop && get_line(&d->buf, line, d->ret))
 		return (1);
 	delete(&fd_list, d);
 	return (0);

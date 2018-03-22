@@ -52,7 +52,7 @@ typedef struct	s_gnl
 	struct s_gnl	*next;
 }				t_gnl;
 
-int				ft_get_next_line(int const fd, char **line);
+int				ft_get_next_line(int const fd, char **line, int stop);
 
 /*
 **	----------> Number manipulation functions <-----
