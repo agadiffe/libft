@@ -126,7 +126,7 @@ int				ft_get_next_line(int const fd, char **line, int stop)
 			return (-1);
 	}
 	if (!stop && get_line(&d->buf, line, d->ret))
-		return (1);
+		return (2);
 	delete(&fd_list, d);
 	return (0);
 }
